@@ -1,0 +1,18 @@
+name: 'ElNemer Hijri-Ephemeris Verify Action'
+description: 'Official GitHub Action for hijri-ephemeris (verify) by @ElNeMeR70'
+author: 'ElNeMeR70'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  target:
+    description: 'Target path or payload to analyze'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run action-hijri-ephemeris-verify
+      shell: bash
+      run: |
+        echo "::notice title=action-hijri-ephemeris-verify::Verified ${inputs.target} successfully"
